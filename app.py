@@ -46,18 +46,16 @@ intensity = 1
 # Fuente
 font = pygame.font.Font(None, 36)
 
-# Función para mostrar la puntuación
 def show_score():
+    """Mostrar la puntuación"""
     score_text = font.render(f"Puntuación: {score}", True, white)
     screen.blit(score_text, (10, 10))
     win_text = font.render("30 puntos para ganar", True, green)
     screen.blit(win_text, (280, 10))
-
-# Función para mostrar el menú principal
+ 
 def main_menu():
+    """Mostrar el menú principal"""
     global player_color, difficulty, intensity
-
-    selected_option = 1  # Opción seleccionada inicialmente
 
     while True:
         for event in pygame.event.get():
@@ -120,8 +118,8 @@ def main_menu():
         if keys[pygame.K_SPACE]:
             start_game()
 
-# Función principal del juego
 def game():
+    """Función principal del juego"""
     global player_x, player_y, enemy_x, enemy_y, score, enemy_speed
 
     running = True
@@ -162,8 +160,8 @@ def game():
         pygame.display.update()
         clock.tick(60)
 
-# Función para mostrar la pantalla de victoria
 def game_won():
+    """Función para mostrar la pantalla de victoria"""
     screen.fill((0, 0, 0))
     game_won_text = font.render("¡Has ganado!", True, white)
     screen.blit(game_won_text, (screen_width // 2 - 100, screen_height // 2 - 50))
@@ -172,8 +170,8 @@ def game_won():
     pygame.time.delay(2000)
     reset_game()
 
-# Función para mostrar la pantalla de Game Over
 def game_over():
+    """Función para mostrar la pantalla de Game Over"""
     screen.fill((0, 0, 0))
     game_over_text = font.render("Game Over", True, white)
     screen.blit(game_over_text, (screen_width // 2 - 100, screen_height // 2 - 50))
@@ -182,8 +180,8 @@ def game_over():
     pygame.time.delay(2000)
     reset_game()
 
-# Función para reiniciar el juego
 def reset_game():
+    """Función para reiniciar el juego"""
     global player_x, player_y, enemy_x, enemy_y, score, enemy_speed
     player_x = (screen_width - player_width) // 2
     player_y = screen_height - player_height - 20
@@ -192,8 +190,8 @@ def reset_game():
     score = 0
     enemy_speed = 3
 
-# Función para iniciar el juego
 def start_game():
+    """Función para iniciar el juego"""
     global player_x, player_y, enemy_x, enemy_y, score
     player_x = (screen_width - player_width) // 2
     player_y = screen_height - player_height - 20
