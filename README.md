@@ -1,6 +1,6 @@
 ## ESQUIVA Y GANA
 
-Un juego simple de esquivar obstáculos en el que controlas un personaje de color que se mueve horizontalmente en la parte inferior de la pantalla. El objetivo es evitar que los "cubos blancos" (enemigos) que caen desde la parte superior de la pantalla colisionen con tu personaje. El juego tiene varias características clave:
+Un juego simple creado con Python y su libreria Pygame. Se trata de esquivar obstáculos en el que controlas un personaje de color que se mueve horizontalmente en la parte inferior de la pantalla. El objetivo es evitar que los "cubos blancos" (enemigos) que caen desde la parte superior de la pantalla colisionen con tu personaje. El juego tiene varias características clave:
 
 - **Menú Principal**: El juego comienza con un menú principal que permite al jugador elegir el color del personaje, la dificultad y la intensidad del juego.
 
